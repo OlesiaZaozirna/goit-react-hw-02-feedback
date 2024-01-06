@@ -1,9 +1,9 @@
 import React from 'react';
-import css from './Notification.module.css'
+import '../fonts/font.css'
 
 
 const Notification = ({ message }) => {
-  return <p>{message}</p>;
+  return <p style={{ fontFamily: 'PencilFont', fontSize: '30px' }}>{message}</p>;
 };
 
 export default Notification;

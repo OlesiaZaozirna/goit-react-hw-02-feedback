@@ -5,7 +5,7 @@ const Statistics = ({ feedbackData }) => {
   const { good, neutral, bad, total, positivePercentage } = feedbackData;
 
   return (
-    <ul>
+    <ul className={css.Statistics__list} >
       <li>Good: {good}</li>
       <li>Neutral: {neutral}</li>
       <li>Bad: {bad}</li>
