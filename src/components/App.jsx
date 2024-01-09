@@ -37,17 +37,13 @@ class App extends Component {
 
     return (
       <div className={css.App__container}>
-        <Section
-          title="Your Opinion Matters To Us"
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={total}
-          positivePercentage={positivePercentage}
-          onLeaveFeedback={this.handleFeedback}
-        >
+        <Section title="Your Opinion Matters To Us">
+          <p className={css.Description} style={{ fontFamily: 'PencilFont', fontSize: '36px' }}>
+Please leave a little feedback about our service. This will help us improve our service</p>
           <FeedbackOptions options={options} onLeaveFeedback={this.handleFeedback} />
-          {total > 0 ? (
+        </Section>
+        <Section>
+           {total > 0 ? (
            <Statistics feedbackData={{ good, neutral, bad, total, positivePercentage }} />
           ) : (
             <Notification message="There is no feedback" />
